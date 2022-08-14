@@ -1,11 +1,9 @@
 using FluentAssertions;
-using Inventory.Domain;
-using Inventory.Domain.Messaging;
-using Inventory.Infrastructure.DataTransfer;
+using Inventory.Api.Domain;
+using Inventory.Api.Infrastructure.DataTransfer;
+using Inventory.Api.Tests.Models;
 
-namespace Inventory.Infrastructure.Tests;
-
-public record Student(int Id, string Name, DateTime DateOfBirth) : IMessage;
+namespace Inventory.Api.Tests;
 
 public class JsonServiceTests
 {
@@ -14,9 +12,10 @@ public class JsonServiceTests
     {
         var student = new Student(1, "Cheranga Hatangala", new DateTime(1982, 11, 01));
         var service = new JsonService();
-        var serializedContent = (await service.SerializeAsync(student).Run()).IfFail(error => error.Message);
+        var operation = await service.SerializeAsync(student).Run();
 
-        serializedContent.Should().NotBeNull().And.NotBeEmpty();
+        operation.IsSucc.Should().BeTrue();
+        operation.IfSucc(s => s.Should().NotBeNullOrEmpty());
     }
 
     [Fact]

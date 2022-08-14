@@ -1,6 +1,11 @@
+using Inventory.Api.Domain.Messaging;
+using Inventory.Api.Features.AddInventory;
+using Inventory.Api.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+RegisterDependencies(builder);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,3 +28,13 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+void RegisterDependencies(WebApplicationBuilder applicationBuilder)
+{
+    applicationBuilder.Services.AddSingleton<IAddInventoryService, AddInventoryService>();
+    
+    var messageConfig = applicationBuilder.Configuration.GetSection(nameof(MessageConfig)).Get<MessageConfig>();
+    applicationBuilder.Services.AddSingleton(messageConfig);
+
+    applicationBuilder.RegisterInfrastructure(() => messageConfig);
+}

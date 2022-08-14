@@ -2,11 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Api", "src\Inventory.Api\Inventory.Api.csproj", "{5E60E3E8-9A5A-4DE8-8DCD-C55CCEBFC9DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Infrastructure.Tests", "tests\Inventory.Infrastructure.Tests\Inventory.Infrastructure.Tests.csproj", "{508962C6-9B3F-4556-A4A7-6C12FA50DD5A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Infrastructure", "src\Inventory.Infrastructure\Inventory.Infrastructure.csproj", "{940801CE-EA29-4499-B0FA-A3FC6123CC83}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Domain", "src\Inventory.Domain\Inventory.Domain.csproj", "{B47F1838-6862-4CE4-9EFB-09C255B9AFB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Api.Tests", "tests\Inventory.Api.Tests\Inventory.Api.Tests.csproj", "{508962C6-9B3F-4556-A4A7-6C12FA50DD5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,13 +18,5 @@ Global
 		{508962C6-9B3F-4556-A4A7-6C12FA50DD5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{508962C6-9B3F-4556-A4A7-6C12FA50DD5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{508962C6-9B3F-4556-A4A7-6C12FA50DD5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{940801CE-EA29-4499-B0FA-A3FC6123CC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{940801CE-EA29-4499-B0FA-A3FC6123CC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{940801CE-EA29-4499-B0FA-A3FC6123CC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{940801CE-EA29-4499-B0FA-A3FC6123CC83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B47F1838-6862-4CE4-9EFB-09C255B9AFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B47F1838-6862-4CE4-9EFB-09C255B9AFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B47F1838-6862-4CE4-9EFB-09C255B9AFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B47F1838-6862-4CE4-9EFB-09C255B9AFB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

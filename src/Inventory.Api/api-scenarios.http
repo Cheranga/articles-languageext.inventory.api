@@ -1,0 +1,9 @@
+POST https://localhost:7261/api/inventory
+Content-Type: application/json
+
+{
+  "correlationId": "666",
+  "id": "666",
+  "name": "keyboard",
+  "locationCode": "666-L6R5"
+}

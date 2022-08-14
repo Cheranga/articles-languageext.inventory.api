@@ -7,4 +7,3 @@ public class AddInventoryRequest
     public string Name { get; set; }
     public string LocationCode { get; set; }
 }
-

@@ -1,4 +1,4 @@
-﻿namespace Inventory.Domain;
+﻿namespace Inventory.Api.Domain;
 
 public static class ErrorCodes
 {

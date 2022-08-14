@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Inventory.Infrastructure\Inventory.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\Inventory.Api\Inventory.Api.csproj" />
     </ItemGroup>
 
 </Project>
